@@ -2,22 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <title>Document</title>
-        <link rel="manifest" href="/manifest.json"/>
+        <link rel="manifest" href="manifest.json"/>
         <meta name="theme-color" content="#B12A34"/>
         <meta charset="UTF-8"/>
-        <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png"/>
+        <link rel="apple-touch-icon" href="img/icons/icon-192x192.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <script type="text/javascript" src="./index.js"></script>
+        <script type="text/javascript" src="index.js"></script>
     </head>
     <body>
-        <div style="border-color:silver;border-width:1;border-style:dashed;padding:5px">
-            <button class="pyrun" style="padding:5px">RUN</button>
-        </div>
-        <textarea id="python-code" style="width:100%;height:200px">
+        <div style="margin-bottom:8px">
+            <div>
+                <button class="pyrun">RUN</button>
+                <button class="pyrm">DELETE</button>
+            </div>
+            <textarea class="python-code" style="width:100%;height:24px onkeyup="this.style.height='24px'; this.style.height = this.scrollHeight + 12 + 'px';">
 import pandas as pd
-import numpy as np
-        </textarea>
-        <div id="output" style="margin-top:8px;padding:5px;border-color:blue;border-width:1px;border-style:solid;"></div>
-        <div id="error" style="margin-top:8px;margin-bottom:8px;padding:5px;border-color:red;border-width:1px;border-style:solid;"></div>
+import numpy as np</textarea>
+            <div class="output" style="display:none;margin-top:8px;padding:5px;border-color:blue;border-width:1px;border-style:solid;"></div>
+            <div class="error" style="display:none;margin-top:8px;margin-bottom:8px;padding:5px;border-color:red;border-width:1px;border-style:solid;"></div>
+        </div>
     </body>
 </html>
